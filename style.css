@@ -1,0 +1,35 @@
+*{
+ margin: 0px;
+padding:0px;
+}
+
+body {
+  background-color:black;
+  overflow: hidden;
+}
+
+.main {
+  background-color:lightblue;
+  margin: 50px;
+  padding: 25px;
+  border-radius:30px;
+  text-align: center;
+}
+button {
+  border:hidden;
+  background-color:white;
+  border-radius:10px;
+  cursor: pointer;
+  padding:20px;
+}
+input {
+  padding:20px;
+}
+li {
+  display: inline;
+}
+canvas {
+  position: absolute;
+  top: 10px;
+  z-index:-1;
+}

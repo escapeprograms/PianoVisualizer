@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Piano Visualizer!</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+		<link rel="icon" href="keyboard.jpg">
+    <!--Sound resources (scripts and note xmp3) https://github.com/Tonejs-->
+    <script type="text/javascript" src="https://unpkg.com/tone@latest/build/Tone.js"></script>
+		<script type="text/javascript" src="https://unpkg.com/@tonejs/ui@0.0.8/build/tonejs-ui.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@tonejs/midi"></script>
+  </head>
+	
+	<body onkeypress="addKey(event)" onkeyup="removeKey(event)">
+  <canvas id="canvas">Your browser does not support the HTML5 canvas tag.</canvas>
+    
+  <section class="main">
+     <h3>
+       Welcome to Piano Visualizer!
+     </h3>
+    <h5>
+       By Archimedes Li
+     </h5>
+    <img src="keyboard.jpg" width="300px">
+    <p>  
+    Play music using the keyboard, including digits and letters!  You can also choose to uploada file or use a sample song to play as a background track.  Toggle this menu with the spacebar.
+    </p>
+    
+    <input type="file" id="filereader">
+    <span><strong>OR</strong></span>
+    <select  id="samplesong">
+      <label>Sample Song</label>
+    <option value="sample_eva">Select a Song</option>
+    <option value="sample_bee">Flight of the Bumblebee</option>
+    <option value="sample_eva">Eva Theme</option>
+    <option value="sample_megalo">Megalovania</option>
+    <option value="sample_bach">Bach Prelude</option>
+    <option value="sample_canon">Canon in D</option>
+    </select>
+     <button onclick="runSong()" id="start">Play Song!</button>
+  </section>
+  
+
+  <script>setTimeout(()=>{window.scrollTo(0, 0);},500)//scroll to top</script>
+  <script src = "./keyboard.js"></script>
+  <script src = "./midi.js"></script>
+  <script src = "./render.js"></script>
+	</body>
+</html>
